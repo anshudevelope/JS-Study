@@ -30,3 +30,44 @@ console.log(typeof age);      // Number
 console.log(typeof undefined); // Undefined
 console.log(typeof null);     // Object
 
+
+// Data Types --
+// 1- Primitive Data Types
+// These are of 7 Types : String, Number, Boolean, Null, Undefined, Symbol, BigInt.
+
+const id = Symbol('123')
+const anotherId = symbol('123')
+
+console.log(id === anotherId);  // Output => False
+
+const bigNumber = 345678345693839234098092553592850928032n  // Converted to bigInt
+
+// 2- Reference Data Type / Non Primitive Data Types (Return Type - Object/Function Object)
+// Array, Objects, Functions
+
+// Array
+const heros = ["Saktiman", "Naagraj", "Thor", "IronMan", "SuperMan"]
+
+// Object - Exist within {} & Written in Key Value Pairs. Eg.
+
+{
+    name: "Anshu",
+    age: 26,
+}
+
+// Objects can also be stored in any valiable. eg.
+
+let muobj = {
+    name: "Anshu",
+    age : 26,
+}
+
+// Function - In JS, Functions can also be treated as variables. and also function can be stored in any variable.
+
+const myFunction = function(){
+    console.log("Hello Anshu");
+}
+
+// Note - In JS we never define the language of any data type.
+
+
