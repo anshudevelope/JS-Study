@@ -36,7 +36,7 @@ console.log(typeof null);     // Object
 // These are of 7 Types : String, Number, Boolean, Null, Undefined, Symbol, BigInt.
 
 const id = Symbol('123')
-const anotherId = symbol('123')
+const anotherId = Symbol('123')
 
 console.log(id === anotherId);  // Output => False
 
@@ -50,15 +50,11 @@ const heros = ["Saktiman", "Naagraj", "Thor", "IronMan", "SuperMan"]
 
 // Object - Exist within {} & Written in Key Value Pairs. Eg.
 
-{
-    name: "Anshu",
-    age: 26,
-}
-
 // Objects can also be stored in any valiable. eg.
 
-let muobj = {
-    name: "Anshu",
+let myobj = {
+
+    name : "Anshu",
     age : 26,
 }
 
@@ -71,3 +67,29 @@ const myFunction = function(){
 // Note - In JS we never define the language of any data type.
 
 
+
+// Memory in JS +++++++++++++++++++++++++++++++++++++
+
+// Stack (Works for Primitive Data Type) 
+// Heap (Works for Non Primitive Data Type)
+
+let myYoutubeName = "anshuBlogs"
+
+let anotherName =  "Ansh.maurya"
+
+anotherName = "RamRamRamRamRam"
+
+console.log(myYoutubeName);
+console.log(anotherName);
+
+let user = {
+    email: 'anshu.maurya7300@gmail.com',
+    upi: "user@upi"
+}
+
+let userTwo = user
+
+userTwo.email = "anshu@gmail.com"
+
+console.log(user.email);
+console.log(userTwo.email);
