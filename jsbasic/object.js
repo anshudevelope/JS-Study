@@ -1,4 +1,4 @@
-// singleton
+// singleton  - Study in object2.js file
 
 // object literals - to declare any object
 
