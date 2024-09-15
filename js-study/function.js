@@ -68,5 +68,49 @@ function loginUsedMessage(username = "Anshu"){
     return `${username} just logged in`  
 }
 
-console.log(loginUsedMessage());  // Anshu just logged in
-console.log(loginUsedMessage("Jhonson"));  // Jhonson just logged in
+// console.log(loginUsedMessage());  // Anshu just logged in
+// console.log(loginUsedMessage("Jhonson"));  // Jhonson just logged in
+
+// Rest Operator - triple dots (...)
+
+function calculateCartPrice(val1, val2, ...num1){
+    return num1
+}
+
+console.log(calculateCartPrice(200, 400, 4000, 600, 50, 200));  // Output - [ 4000, 600, 50, 200 ]  - As 200 and 400 goes for val1 & val2 then the rest values goes in num1 in the array form.
+
+
+// how object can be pass or used in a function
+
+const user = {
+    username: "Anshu",
+    password: 1999
+}
+
+function handleObject(anyObject){
+    console.log(`Username is ${anyObject.username} and Password is: ${anyObject.password}`);
+    
+}
+
+// handleObject(user)  // Output - Username is Anshu and Password is: 1999
+
+// Or Object can be defined within the function also
+
+handleObject({
+    username: "AnshuAdmin",
+    password: 1098
+})
+
+// Same Output - Username is AnshuAdmin and Password is: 1098
+
+// Function with Array
+
+const myNewArray = [200, 137, 1000, 499, 213]
+
+function returnArrayValue(getArray){
+    return getArray[1]
+}
+
+console.log(returnArrayValue(myNewArray));  // Output - 137
+console.log(returnArrayValue([200, 137, 1000, 499, 213]));  // Output - 137  -- Directly using the array
+
