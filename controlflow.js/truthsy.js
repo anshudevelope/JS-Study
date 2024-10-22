@@ -30,7 +30,7 @@ if (Object.keys(emptyObj).length === 0){
 
 let val1;
 
-val1 = 5 ?? 10
+val1 = 5 ?? 78
 
 console.log(val1);  // Output - Left hand operand - 5
 
