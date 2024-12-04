@@ -34,6 +34,20 @@
     addoptimlanguage('.net')
 
     // Edit any value
+
+    const secondLang = document.querySelector("li:nth-child(2)")
+    // secondLang.innerHTML = "mojo"
+    const newLi = document.createElement('li')
+    newLi.textContent = "mojo"
+    secondLang.replaceWith(newLi)
+
+    // Edit - 2nd method
+    const firstLi = document.querySelector("li:first-child")
+    firstLi.outerHTML = `<li>Typescript</li>`
+
+    // remove any value
+    const lastLi = document.querySelector('li:last-child')
+    lastLi.remove()
 </script>
 
 </html>
