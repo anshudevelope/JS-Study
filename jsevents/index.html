@@ -50,12 +50,12 @@
     // e.stopPropagation()
     // }, false)
 
-    document.getElementById('google').addEventListener("click", function(e){
-        e.preventDefault()
-        e.stopPropagation()
-         console.log("clicked the google");
-         alert("clicked the google")
-    }, false)
+    // document.getElementById('google').addEventListener("click", function(e){
+    //     e.preventDefault()
+    //     e.stopPropagation()
+    //      console.log("clicked the google");
+    //      alert("clicked the google")
+    // }, false)
 
 
 
@@ -70,6 +70,23 @@
     //      alert("clicked the owl")
          
     // }, true)
+
+    document.querySelector('#images').addEventListener('click', function(e){
+        console.log(e.target.parentNode);
+        console.log(e.target.tagName);
+        
+        if(e.target.tagName === "IMG"){
+            console.log(e.target.id);
+            
+        }
+
+        // to remove the list item
+        let removeli = e.target.parentNode;
+        // New Mwthod
+        removeli.remove();
+        // Old Method
+        // removeli.parentNode.removeChild(removeli);
+    })
 
 
 
