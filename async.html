@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Learning</title>
+</head>
+<body>
+    <h1>Async Project</h1>
+    <button id="stop">Stop</button>
+</body>
+
+<script>
+
+    const writeAnshu = function(){
+        console.log("I am Anshu");   
+    }
+
+    const changetext = function(){
+        document.querySelector('h1').innerHTML = "I am Anshu Maurya";
+    }
+
+    // setTimeout(changetext, 3000)
+
+    // setTimeout(writeAnshu, 3000)
+
+    const changeMe = setTimeout(changetext, 3000);
+
+    document.querySelector('#stop').addEventListener('click', function(){
+        clearTimeout(changeMe);
+        console.log("STTOPED");
+        
+    })
+
+
+
+
+</script>
+</html>
