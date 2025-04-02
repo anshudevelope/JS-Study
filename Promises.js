@@ -86,8 +86,37 @@ async function consumePromiseFive() {
         console.log(response);
     } catch (error) {
         console.log(error);
-        
+
     }
 }
 
 consumePromiseFive();
+
+
+// Now use of promises with fetch()
+// fetch() is a mechanism that lets a user make simple AJAX (Asynchronous JavaScript and XML) calls with JavaScript. This means you can use this function to make a call without interrupting the execution of other operations.
+
+// async function getAllUsers() {
+//     try {
+//         const response = await fetch("https://jsonplaceholder.typicode.com/posts");
+//         // console.log(typeof response);
+
+//         const data = await response.json();
+//         // console.log(data);
+//     } catch (error) {
+//         console.log("E:", error);
+//     }
+// }
+
+// getAllUsers();
+
+// Other method (use of then - promise)
+
+fetch("https://jsonplaceholder.typicode.com/posts")
+.then((response) => {
+    return response.json()
+})
+.then((data) => {
+    console.log(data);
+})
+.catch((error) => console.log(error));
